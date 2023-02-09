@@ -6,11 +6,11 @@ export default function Testimonials(){
       <div>
         <h1>O que nossos clientes dizem</h1>
       </div>
-      <div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <Styled.ContainerCards>
+        <Styled.Card></Styled.Card>
+        <Styled.Card></Styled.Card>
+        <Styled.Card></Styled.Card>
+      </Styled.ContainerCards>
     </Styled.TestimonialsSection>
   )
 }

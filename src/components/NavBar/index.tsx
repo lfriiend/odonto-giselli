@@ -11,6 +11,7 @@ const NavBar:React.FC = () => {
         <li><a href="/">Sobre</a></li>
         <li><a href="/">Depoimentos</a></li>
         <li> <a href="/">Serviços</a></li>
+        <li> <a href="/">Especialistas</a></li>
       </Styled.Links>
     
     </Styled.NavMenu>

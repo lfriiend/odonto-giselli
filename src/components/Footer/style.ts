@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-export const ServicesSection = styled.section`
+export const Footer = styled.footer`
 width: 100%;
-
 `

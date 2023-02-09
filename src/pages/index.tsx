@@ -1,6 +1,9 @@
 import About from '@/components/About';
 import MainContainer from '@/components/MainContainer';
 import NavBar from '@/components/NavBar'
+import OurServices from '@/components/OurServices';
+import OurTeam from '@/components/OurTeam';
+import Testimonials from '@/components/Testimonials';
 import Head from 'next/head'
 import { request } from "../lib/datocms";
 
@@ -45,6 +48,9 @@ export default function Home(props:any) {
       <NavBar/>
       <MainContainer/>
       <About/>
+      <Testimonials/>
+      <OurServices/>
+      <OurTeam/>
     </>
   )
 }
