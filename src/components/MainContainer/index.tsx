@@ -24,9 +24,10 @@ export default function MainContainer(){
         </Styled.Welcome>
         <Styled.Teste>
     <Image 
+    loading='lazy'
     src={Face}
     alt=''
-    width={1000}
+    width={800}
     />
         </Styled.Teste>
     </Styled.MainSection>
