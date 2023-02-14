@@ -1,17 +1,18 @@
 import * as Styled from './style'
 import Image from 'next/image'
 import Logo  from '../../assets/images/logo.png'
+import Link from 'next/link'
 
 const NavBar:React.FC = () => {
   return ( 
     <Styled.NavMenu>
-    <a href="/"><Image src={Logo} alt="" width={100}  /></a>
+    <Link href="/"><Image src={Logo} alt="" width={100}  /></Link>
     
       <Styled.Links>
-        <li><a href="/">Sobre</a></li>
-        <li><a href="/">Depoimentos</a></li>
-        <li> <a href="/">Serviços</a></li>
-        <li> <a href="/">Especialistas</a></li>
+        <li><Link href="/">Sobre</Link></li>
+        <li><Link href="/">Depoimentos</Link></li>
+        <li> <Link href="/">Serviços</Link></li>
+        <li> <Link href="/">Especialistas</Link></li>
       </Styled.Links>
     
     </Styled.NavMenu>
