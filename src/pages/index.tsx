@@ -1,4 +1,5 @@
 import About from '@/components/About';
+import Footer from '@/components/Footer';
 import MainContainer from '@/components/MainContainer';
 import NavBar from '@/components/NavBar'
 import OurServices from '@/components/OurServices';
@@ -51,6 +52,7 @@ export default function Home(props:any) {
       <Testimonials props={data}/>
       <OurServices/>
       <OurTeam/>
+      <Footer/>
     </>
   )
 }
