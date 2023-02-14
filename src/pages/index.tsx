@@ -7,35 +7,35 @@ import Testimonials from '@/components/Testimonials';
 import Head from 'next/head'
 import { request } from "../lib/datocms";
 
-// const HOMEPAGE_QUERY = `{
-//   allSobres {
-//     id
-//     titulo
-//     foto {
-//       id
-//       url
-//     }
-//     _status
-//     _firstPublishedAt
-//   }
+const HOMEPAGE_QUERY = `{
+  allSobres {
+    id
+    titulo
+    foto {
+      id
+      url
+    }
+    _status
+    _firstPublishedAt
+  }
 
-//   _allSobresMeta {
-//     count
-//   }
-// }`;
-// export async function getStaticProps() {
-//   const data = await request({
-//     query: HOMEPAGE_QUERY
-//   });
-//   return {
-//     props: { data },
-//     revalidate: 10
-//   };
-// }
+  _allSobresMeta {
+    count
+  }
+}`;
+export async function getStaticProps() {
+  const data = await request({
+    query: HOMEPAGE_QUERY
+  });
+  return {
+    props: { data },
+    revalidate: 5
+  };
+}
 
 export default function Home(props:any) {
-  // const {data} = props;
-  // console.log(data.allSobres[0])
+  const {data} = props;
+  console.log(data.allSobres[0])
 
   return (
     <>
@@ -48,7 +48,7 @@ export default function Home(props:any) {
       <NavBar/>
       <MainContainer/>
       <About/>
-      <Testimonials/>
+      <Testimonials props={data}/>
       <OurServices/>
       <OurTeam/>
     </>

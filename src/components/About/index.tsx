@@ -11,9 +11,11 @@ export default function About(){
     </Styled.AboutText>
     <div>
     <Image
+    loading='lazy'
     src={Tela}
     alt=''
-    width={1000}
+    width={800}
+    priority={false}
     />
     </div>
     </Styled.AboutSection>

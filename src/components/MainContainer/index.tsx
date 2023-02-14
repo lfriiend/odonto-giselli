@@ -14,6 +14,7 @@ export default function MainContainer(){
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed est at nisl rutrum vestibulum quis non lacus.</p>
           <button>
             <Image
+            loading='lazy'
             src={Whatsapp}
             alt=''
             width={20}

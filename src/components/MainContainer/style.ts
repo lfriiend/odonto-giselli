@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 export const MainSection = styled.section`
 width: 100%;
+height: auto;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 padding-left: 200px;
 padding-top: 20px;
 align-items: center;
+
 `
 
 export const Welcome = styled.div`
