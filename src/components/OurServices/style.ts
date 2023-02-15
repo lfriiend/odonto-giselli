@@ -10,10 +10,19 @@ padding-right: 200px;
 padding-top: 20px;
 align-items: center;
 
-img{
+.image{
 border-radius: 0 500px 500px 0;
 margin-right: 100px;
+@media (max-width: 1300px) {
+    width: 100%;
+    height: auto;
+  }
 }
+
+@media (max-width: 1300px) {
+    flex-direction: column;
+    padding-right: 0;
+  }
 `
 
 export const BoxText = styled.div`
@@ -41,9 +50,12 @@ a{
   text-decoration: none;
   transition: background 200ms;
   margin-top: 10px;
+
+  
   
 img{
 margin: 0;
 }
+
 }
 `

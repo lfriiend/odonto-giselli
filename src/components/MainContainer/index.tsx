@@ -22,14 +22,14 @@ export default function MainContainer(){
             faça seu orçamento
             </button>
         </Styled.Welcome>
-        <Styled.Teste>
+        <Styled.ImageContainer>
     <Image 
     loading='lazy'
     src={Face}
     alt=''
     width={800}
     />
-        </Styled.Teste>
+        </Styled.ImageContainer>
     </Styled.MainSection>
     <Catch/>
     </>

@@ -8,6 +8,14 @@ justify-content: space-between;
 align-items: center;
 padding-inline: 100px;
 padding-top: 20px;
+
+.logo{
+  @media (max-width: 910px) {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+}
 `
 
 export const Links = styled.ul`
@@ -41,4 +49,10 @@ a:hover::before {
 transform-origin: left;
 transform: scaleX(1);
 }
+
+@media (max-width: 910px) {
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+  }
 `

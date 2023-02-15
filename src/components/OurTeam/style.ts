@@ -5,6 +5,10 @@ width: 100%;
 background-color: #374267;
 margin-top: 100px;
 padding: 100px 200px;
+
+@media (max-width: 1300px) {
+  padding: 2%;
+  }
 `
 
 export const TitleBox = styled.div`
@@ -19,6 +23,10 @@ export const ContainerCards = styled.div`
 display: flex;
 width: 100%;
 justify-content: center;
+@media (max-width: 1300px) {
+  text-align: center;
+  flex-wrap: wrap;
+  }
 `
 
 export const Card = styled.div`

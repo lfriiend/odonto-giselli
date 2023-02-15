@@ -7,6 +7,7 @@ export default function OurServices(){
   return(
     <Styled.ServicesSection>
       <Image
+      className='image'
       src={service}
       alt=''
       width={1000}

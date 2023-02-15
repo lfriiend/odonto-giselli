@@ -6,6 +6,12 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding: 100px 200px;
+
+@media (max-width: 1300px){
+  flex-direction: column;
+  padding: 0;
+  padding-top: 20px;
+}
 `
 
 export const ContainerCards = styled.div`
@@ -15,10 +21,18 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 padding-top: 50px;
+
+@media (max-width: 1300px){
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0;
+  padding-top: 20px;
+}
 `
 
 export const Card = styled.div`
-&{
+
 padding: 20px;
 border-radius: 20px;
 width: 300px;
@@ -28,7 +42,7 @@ line-height: 2;
 color: white;
 margin: 10px;
 position: relative;
-}
+
 p:after{
   content: "";
   padding-top: 5px;

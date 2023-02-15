@@ -21,4 +21,10 @@ padding: 20px 200px;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+
+@media (max-width: 1300px) {
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: center;
+}
 `

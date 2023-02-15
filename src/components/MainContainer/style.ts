@@ -10,6 +10,13 @@ padding-left: 200px;
 padding-top: 20px;
 align-items: center;
 
+@media (max-width: 1300px) {
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+  }
+
+
 `
 
 export const Welcome = styled.div`
@@ -33,6 +40,10 @@ button {
   text-decoration: none;
   transition: background 200ms;
   margin-top: 10px;
+
+  @media (max-width: 1300px) {
+    margin: 0 auto;
+  }
 }
 
 button:hover {
@@ -41,9 +52,20 @@ button:hover {
 }
 `
 
-export const Teste = styled.div`
+export const ImageContainer = styled.div`
 
 img{
 border-radius: 500px 0 0 500px;
+@media (max-width: 1300px) {
+  padding-top: 10px;
+  width: 100%;
+  height: auto;
+  }
 }
+
+@media (max-width: 1300px) {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  }
 `

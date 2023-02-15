@@ -6,7 +6,7 @@ import Link from 'next/link'
 const NavBar:React.FC = () => {
   return ( 
     <Styled.NavMenu>
-    <Link href="/"><Image src={Logo} alt="" width={100}  /></Link>
+    <Link className='logo' href="/"><Image src={Logo} alt="" width={100}  /></Link>
     
       <Styled.Links>
         <li><Link href="/">Sobre</Link></li>

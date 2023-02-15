@@ -30,7 +30,6 @@ export default function Catch(){
   return(
     <Styled.CatchSection>
       
-      
     {
       React.Children.toArray(
         list.map(item =>{
