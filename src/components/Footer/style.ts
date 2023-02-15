@@ -6,6 +6,7 @@ display: flex;
 line-height: 2;
 padding: 100px 200px;
 background-color: #EAE0D6;
+justify-content: space-between;
 
 svg{
   width: 20px;
