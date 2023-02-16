@@ -14,6 +14,7 @@ align-items: center;
   flex-direction: column;
   text-align: center;
   padding: 0;
+  padding-top: 100px
   }
 
 

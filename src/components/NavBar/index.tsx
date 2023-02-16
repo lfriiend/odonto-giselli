@@ -2,6 +2,7 @@ import * as Styled from './style'
 import Image from 'next/image'
 import Logo  from '../../assets/images/logo.png'
 import Link from 'next/link'
+import MobileMenu from './MobileMenu'
 
 const NavBar:React.FC = () => {
   return ( 
@@ -15,6 +16,9 @@ const NavBar:React.FC = () => {
         <li> <Link href="/">Especialistas</Link></li>
       </Styled.Links>
     
+    <Styled.Mobile>
+      <MobileMenu/>
+    </Styled.Mobile>
     </Styled.NavMenu>
     
    );

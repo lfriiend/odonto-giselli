@@ -10,7 +10,7 @@ padding-inline: 100px;
 padding-top: 20px;
 
 .logo{
-  @media (max-width: 910px) {
+  @media (max-width: 1300px) {
   position: absolute;
   top: 2%;
   left: 2%;
@@ -50,9 +50,16 @@ transform-origin: left;
 transform: scaleX(1);
 }
 
-@media (max-width: 910px) {
-    flex-direction: column;
-    align-items: center;
-    height: 80vh;
+@media (max-width: 1300px) {
+    display: none;
   }
+`
+
+export const Mobile = styled.div`
+@media (min-width: 1300px) {
+    display: none;
+  }
+  position: absolute;
+  top: 2%;
+  right: 2%;
 `
