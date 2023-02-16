@@ -36,6 +36,7 @@ export const Card = styled.div`
 padding: 20px;
 border-radius: 20px;
 width: 300px;
+min-height: 350px;
 height: auto;
 background-color: #374267;
 line-height: 2;
@@ -43,9 +44,9 @@ color: white;
 margin: 10px;
 position: relative;
 
-p:after{
+a:before{
   content: "";
-  padding-top: 5px;
+  margin-top: -65px;
   width: 260px;
   position: absolute;
   display: flex;
@@ -70,6 +71,10 @@ a{
   transition: background 200ms;
   margin: 20px auto 0;
   align-items: center;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  right: 0;
 }
 
 a:hover{

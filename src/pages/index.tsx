@@ -20,8 +20,10 @@ const HOMEPAGE_QUERY = `{
     _firstPublishedAt
   }
 
-  _allSobresMeta {
-    count
+  allDepoimentos {
+    titulo
+    texto
+    instagram
   }
 }`;
 export async function getStaticProps() {
@@ -36,7 +38,6 @@ export async function getStaticProps() {
 
 export default function Home(props:any) {
   const {data} = props;
-  console.log(data.allSobres[0])
 
   return (
     <>
