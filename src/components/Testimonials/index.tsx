@@ -8,9 +8,9 @@ export default function Testimonials(data:any){
   // console.log('teste',data.props.allSobres[0].titulo)
 
   return(
-    <Styled.TestimonialsSection>
+    <Styled.TestimonialsSection id='depoimentos'>
       <div>
-        <h1>O que nossos clientes dizem</h1>
+        <h2>O que nossos clientes dizem</h2>
       </div>
       <Styled.ContainerCards>
         <Styled.Card>

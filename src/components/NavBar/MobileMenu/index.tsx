@@ -22,7 +22,7 @@ const MobileMenu: React.FC = () => {
     </button>
     <ul id='nav-menu' className={showMenu ? 'menu menuOpen' : 'menu menuClose'}>
       <li><Link href="#container-banner" onClick={handleClick}>Home</Link></li>
-      <li><Link href="#about" onClick={handleClick}>Sobre</Link></li>
+      <li><Link href="#sobre" onClick={handleClick}>Sobre</Link></li>
       <li><Link href="#customer" onClick={handleClick}>Depoimentos</Link></li>
       <li><Link href="#container-contact" onClick={handleClick}>Contato</Link></li>
     </ul>

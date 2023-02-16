@@ -7,7 +7,7 @@ import Whatsapp from '../../assets/svg/whatsapp.svg'
 export default function MainContainer(){
   return(
     <>
-    <Styled.MainSection>
+    <Styled.MainSection id='home'>
         <Styled.Welcome>
           <h4>DRA. GISELLI ALVES 🦷</h4>
           <h1>ODONTOLOGIA & HARMONIZAÇÃO FACIAL</h1>
@@ -24,9 +24,8 @@ export default function MainContainer(){
         </Styled.Welcome>
         <Styled.ImageContainer>
     <Image 
-    loading='lazy'
     src={Face}
-    alt=''
+    alt='banner da logo com uma mulher ruiva sorrindo'
     width={800}
     />
         </Styled.ImageContainer>

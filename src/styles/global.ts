@@ -20,6 +20,10 @@ html, body{
   background-image: ${StaticImageData.backgroundImage};
   background-size: ${StaticImageData.backgroundSize};
   background-position: ${StaticImageData.backgroundPosition};
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 ul, li{

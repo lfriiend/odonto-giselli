@@ -6,9 +6,9 @@ import Image from 'next/image'
 
 export default function OurTeam(){
   return(
-    <Styled.OurTeamSection>
+    <Styled.OurTeamSection id='especialistas'>
       <Styled.TitleBox>
-        <h1>Nosso time</h1>
+        <h2>Nosso time</h2>
         <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
       </Styled.TitleBox>
       <Styled.ContainerCards>

@@ -55,11 +55,14 @@ a{
   transition: background 200ms;
   margin-top: 10px;
 
-  
-  
 img{
 margin: 0;
 }
 
+}
+
+a:hover {
+  cursor: pointer;
+  filter: brightness(0.9);
 }
 `
