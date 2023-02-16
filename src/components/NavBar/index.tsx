@@ -7,7 +7,7 @@ import MobileMenu from './MobileMenu'
 const NavBar:React.FC = () => {
   return ( 
     <Styled.NavMenu>
-    <Link className='logo' href="/"><Image src={Logo} alt="" width={100}  /></Link>
+    <Link className='logo' href="/" aria-label="Logo Dra. Giselli ALves"><Image src={Logo} alt="Logo Dra. Giselli Alves" width={100}  /></Link>
     
       <Styled.Links>
         <li><Link href="/">Sobre</Link></li>

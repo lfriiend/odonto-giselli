@@ -42,13 +42,17 @@ align-items: center;
 line-height: 2;
 
 h5{
-  color: #7B7872;
+  color: black;
   font-weight: 700;
+}
+
+h3{
+  color: #374267
 }
 
 p{
   padding: 10px 20px;
-  color: #7B7872;
+  color: black;
   line-height: 1.5;
 }
 

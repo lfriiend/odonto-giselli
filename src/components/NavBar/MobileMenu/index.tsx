@@ -14,10 +14,10 @@ const MobileMenu: React.FC = () => {
 
   return (
     <Styled.NavMobile>
-    <button className={showMenu ? 'icon iconActive' : 'icon'} onClick={handleClick}>
+    <button aria-label="Abrir Menu Mobile" className={showMenu ? 'icon iconActive' : 'icon'} onClick={handleClick}>
     <FaBars size={50}/>
     </button>
-    <button className={showMenu ? 'close closeActive' : 'close'} onClick={handleClick}>
+    <button aria-label="Fechar Menu Mobile" className={showMenu ? 'close closeActive' : 'close'} onClick={handleClick}>
      <AiFillCloseCircle size={50}/>
     </button>
     <ul id='nav-menu' className={showMenu ? 'menu menuOpen' : 'menu menuClose'}>
