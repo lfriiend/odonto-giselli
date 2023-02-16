@@ -8,6 +8,7 @@ padding: 100px 200px;
 
 @media (max-width: 1300px) {
   padding: 2%;
+  text-align: center;
   }
 `
 

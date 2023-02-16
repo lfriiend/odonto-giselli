@@ -27,4 +27,11 @@ h4, h2{
 .location{
   padding-top: 30px;
 }
+
+@media (max-width: 1300px) {
+  flex-direction: column;
+  text-align: center;
+  padding: 2%;
+  justify-content: center;
+  }
 `

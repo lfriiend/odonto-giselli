@@ -32,6 +32,10 @@ flex-direction: column;
 align-items: center;
 line-height: 2;
 
+@media (max-width: 1300px) {
+    padding-inline: 2%;
+  }
+
 a{
   background: #374267;
   border: none;

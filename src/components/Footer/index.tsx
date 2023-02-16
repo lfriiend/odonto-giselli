@@ -20,7 +20,7 @@ export default function Footer(){
             </a>
           </div>
           <div className='copyright'>
-            <span>©2023 Dra. Giselle</span><br />
+            <span>©2023 Dra. Giselli</span><br />
             <span>Todos os direitos reservados.</span>
           </div>
         </div>
