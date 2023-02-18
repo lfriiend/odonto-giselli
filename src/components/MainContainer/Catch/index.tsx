@@ -1,47 +1,27 @@
 import React from 'react'
 import * as Styled from './style'
 import Image from 'next/image'
-import Tooth from '../../../assets/svg/tooth-solid.svg'
 
-export default function Catch(){
+export default function Catch(props:any){
 
-  let list = [
-    {
-      title: "Cirurgia",
-      image: "teste",
-      description: 'O implante dentário é o tratamento ideal para repor um ou mais dentes naturais que você perdeu.'
-    },
-    {
-      title: "Cirurgia",
-      image: "teste",
-      description: 'O implante dentário é o tratamento ideal para repor um ou mais dentes naturais que você perdeu'
-    },
-    {
-      title: "Cirurgia",
-      image: "teste",
-      description: 'O implante dentário é o tratamento ideal para repor um ou mais dentes naturais que você perdeu'
-    },
-    {
-      title: "Cirurgia",
-      image: "teste",
-      description: 'O implante dentário é o tratamento ideal para repor um ou mais dentes naturais que você perdeu'
-    }
-  ]
+  let list = props.allCardshomes;
+  console.log(list,'cardhome');
   return(
     <Styled.CatchSection>
-      
     {
       React.Children.toArray(
-        list.map(item =>{
+        list.map(function(item:any){
           return(
             <Styled.Card>
               <Image
-              src={Tooth}
+              src={item.icone.url}
               alt=''
-              width={60}
+              width={100}
+              height={0}
+              style={{height: 'auto'}}
               />
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+              <h3>{item.titulo}</h3>
+              <p>{item.descricao}</p>
             </Styled.Card>
           )
         })

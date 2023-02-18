@@ -33,6 +33,7 @@ align-items: center;
 line-height: 2;
 
 @media (max-width: 1300px) {
+  padding-top: 20px;
     padding-inline: 2%;
   }
 

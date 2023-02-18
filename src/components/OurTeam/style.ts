@@ -59,5 +59,6 @@ p{
 img{
   margin: 20px;
   border-radius: 0 20px 20px 0;
+  width: auto;
 }
 `

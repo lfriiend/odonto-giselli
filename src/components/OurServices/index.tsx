@@ -1,29 +1,41 @@
 import * as Styled from './style'
 import Image from 'next/image'
-import service from '../../assets/images/service.png'
 import whats from '../../assets/svg/whatsapp.svg'
 import Link from 'next/link'
+import React from 'react'
 
-export default function OurServices(){
+export default function OurServices(data:any){
+
+  let list = data.props.allServicos
+
   return(
-    <Styled.ServicesSection id='servicos'>
+    <Styled.ServicesSection id='servicos'>     
+    {React.Children.toArray(
+    list.map(function(item:any){
+    return(
+      <>
       <Image
       className='image'
-      src={service}
+      src={item.foto.url}
       alt='banner com mulher sorridente'
-      width={1000}
+      width={800}
+      height={0}
+      style={{  height: 'auto' }}
       />
       <Styled.BoxText>
-        <h2>Por que fazer harmonização facial?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor erat eu rhoncus aliquet. Nullam fermentum venenatis erat, eu facilisis velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent molestie tincidunt dui dictum maximus. Pellentesque id lorem ut mi imperdiet porttitor vel ac erat. Nulla arcu felis, hendrerit sit amet rutrum sit amet, bibendum ullamcorper elit. Phasellus vel lectus sed nibh porta consectetur</p>
+        <h2>{item.titulo}</h2>
+        <p>{item.texto}</p>
         <Link href="">
           <Image
           src={whats}
-          alt=''
+          alt='icone'
           width={20}
           />
         saiba mais</Link>
       </Styled.BoxText>
+      </>
+      )
+  }))}
     </Styled.ServicesSection>
   )
 }

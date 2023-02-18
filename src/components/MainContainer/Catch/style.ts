@@ -5,7 +5,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 line-height: 2;
-max-width: 300px;
+width: 300px;
 text-align: center;
 padding: 20px;
 margin: 10px;

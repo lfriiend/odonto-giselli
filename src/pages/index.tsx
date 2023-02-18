@@ -1,4 +1,5 @@
 import About from '@/components/About';
+import DiscountPopup from '@/components/DiscountPopup';
 import Footer from '@/components/Footer';
 import MainContainer from '@/components/MainContainer';
 import NavBar from '@/components/NavBar'
@@ -9,21 +10,47 @@ import Head from 'next/head'
 import { request } from "../lib/datocms";
 
 const HOMEPAGE_QUERY = `{
-  allSobres {
+
+  allCardshomes {
     id
+    descricao
+    link
     titulo
-    foto {
-      id
+    icone {
       url
     }
-    _status
-    _firstPublishedAt
   }
-
   allDepoimentos {
+    id
+    instagram
+    texto
+    titulo
+  }
+  allNossotimes {
+    descricao
+    especialidade
+    foto {
+      url
+      id
+    }
+    nome
+    id
+  }
+  allServicos {
     titulo
     texto
-    instagram
+    id
+    foto {
+      url
+    }
+  }
+  allPopups {
+    imagem {
+      url
+    }
+    titulo
+    texto
+    link
   }
 }`;
 export async function getStaticProps() {
@@ -47,12 +74,13 @@ export default function Home(props:any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <DiscountPopup props={data} />
       <NavBar/>
-      <MainContainer/>
+      <MainContainer props={data}/>
       <About/>
       <Testimonials props={data}/>
-      <OurServices/>
-      <OurTeam/>
+      <OurServices props={data}/>
+      <OurTeam props={data}/>
       <Footer/>
     </>
   )

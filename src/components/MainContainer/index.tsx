@@ -4,7 +4,8 @@ import Image from 'next/image'
 import Catch from './Catch'
 import Whatsapp from '../../assets/svg/whatsapp.svg'
 
-export default function MainContainer(){
+export default function MainContainer(data:any){
+
   return(
     <>
     <Styled.MainSection id='home'>
@@ -30,7 +31,7 @@ export default function MainContainer(){
     />
         </Styled.ImageContainer>
     </Styled.MainSection>
-    <Catch/>
+    <Catch allCardshomes={data.props.allCardshomes}/>
     </>
   )
 }
