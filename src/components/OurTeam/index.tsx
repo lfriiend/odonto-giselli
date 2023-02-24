@@ -7,7 +7,7 @@ export default function OurTeam(data:any){
   let list = data.props.allNossotimes
 
   return(
-    <Styled.OurTeamSection id='especialistas'>
+    <Styled.OurTeamSection id='especialistas' data-aos="fade-up">
       <Styled.TitleBox>
         <h2>Nosso time</h2>
         <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>

@@ -14,6 +14,13 @@ export const Popup = styled.div`
   z-index: 9999;
   border-radius: 20px;
   box-shadow: -4px -4px 8px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 600px){
+  width: 80%;
+  height: auto;
+  top: calc(50% - 200px);
+  right: 10%;
+}
 `;
 
 export const PopupContainer = styled.div`
@@ -22,6 +29,7 @@ height: 100%;
 flex-direction: column;
 gap: 20px;
 align-items: center;
+
 
 img{
   padding-top: 40px;
@@ -62,10 +70,15 @@ export const CloseButton = styled.button`
   font-size: 1.5rem;
   cursor: pointer;
   color: #374267;
+
 `;
 
 export const Message = styled.h2`
   font-size: 2rem;
   margin: 0;
   font-weight: 600;
+
+  @media (max-width: 600px){
+    text-align: center;
+}
 `;

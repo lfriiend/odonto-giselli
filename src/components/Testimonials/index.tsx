@@ -3,21 +3,44 @@ import Image from 'next/image'
 import quote from '../../assets/svg/quotes.svg'
 import insta from '../../assets/svg/instagram.svg'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Carousel from 'better-react-carousel'
 
 export default function Testimonials(data:any){
+  const [cols, setCols] = useState(3);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth >= 1300) {
+        setCols(3);
+      } else if (window.innerWidth >= 700) {
+        setCols(2);
+      } else {
+        setCols(1);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
+  console.log(cols)
+
   let list = data.props.allDepoimentos
 
   return(
-    <Styled.TestimonialsSection id='depoimentos'>
+    <Styled.TestimonialsSection id='depoimentos' data-aos="fade-up">
       <div>
         <h2>O que nossos clientes dizem</h2>
       </div>
       <Styled.ContainerCards>
+      <Carousel cols={cols} rows={1} gap={10} loop scrollSnap={true} showDots={true} mobileBreakpoint={0}>
   {React.Children.toArray(
     list.map(function(item:any){
     return(
+      <Carousel.Item>
     <Styled.Card>
           <Image
            loading='lazy'
@@ -34,8 +57,10 @@ export default function Testimonials(data:any){
            width={20}
           /> RESULTADO</Link>
     </Styled.Card>
+    </Carousel.Item>
     )
   }))}
+  </Carousel>
       </Styled.ContainerCards>
     </Styled.TestimonialsSection>
   )

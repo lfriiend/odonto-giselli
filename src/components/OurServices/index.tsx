@@ -9,7 +9,7 @@ export default function OurServices(data:any){
   let list = data.props.allServicos
 
   return(
-    <Styled.ServicesSection id='servicos'>     
+    <Styled.ServicesSection id='servicos' data-aos="fade-right">     
     {React.Children.toArray(
     list.map(function(item:any){
     return(

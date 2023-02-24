@@ -6,7 +6,7 @@ import MobileMenu from './MobileMenu'
 
 const NavBar:React.FC = () => {
   return ( 
-    <Styled.NavMenu>
+    <Styled.NavMenu data-aos="fade-down">
     <Link 
     className='logo' 
     href="#home" 

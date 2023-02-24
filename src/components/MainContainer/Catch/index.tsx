@@ -7,7 +7,7 @@ export default function Catch(props:any){
   let list = props.allCardshomes;
   console.log(list,'cardhome');
   return(
-    <Styled.CatchSection>
+    <Styled.CatchSection data-aos="fade-up">
     {
       React.Children.toArray(
         list.map(function(item:any){

@@ -7,6 +7,10 @@ flex-direction: column;
 align-items: center;
 padding: 100px 200px;
 
+h2{
+  padding-bottom: 20px;
+}
+
 @media (max-width: 1300px){
   flex-direction: column;
   padding: 0;
@@ -16,19 +20,7 @@ padding: 100px 200px;
 
 export const ContainerCards = styled.div`
 width: 100%;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-padding-top: 50px;
 
-@media (max-width: 1300px){
-  width: 100%;
-  flex-wrap: wrap;
-  flex-direction: column;
-  padding: 0;
-  padding-top: 20px;
-}
 `
 
 export const Card = styled.div`
@@ -41,7 +33,7 @@ height: auto;
 background-color: #374267;
 line-height: 2;
 color: white;
-margin: 10px;
+margin: 0 auto;
 position: relative;
 
 a:before{
