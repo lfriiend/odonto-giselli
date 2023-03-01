@@ -54,15 +54,6 @@ const HOMEPAGE_QUERY = `{
     texto
     link
   }
-  allPosts {
-    titulo
-    texto
-    slug
-    imagem {
-      url
-    }
-    autor
-  }
 }`;
 
 export async function getStaticProps() {
@@ -101,9 +92,7 @@ export default function Home(props:any) {
       <OurServices props={data}/>
       <OurTeam props={data}/>
       <Footer/>
-      <div style={{display: 'none'}}>
-      <Articles props={data}/>
-      </div>
+      
     </>
   )
 }

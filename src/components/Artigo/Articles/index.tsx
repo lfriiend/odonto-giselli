@@ -2,14 +2,39 @@ import * as Styled from './style'
 import Image from 'next/image'
 import Tela from '../../../assets/images/tela.png'
 import CardPost from '../CardPost'
+import React from 'react'
 
 export default function Articles(data:any){
   
-  console.log(data.props.allPosts,'teste articles')
+  let list = data.props.allPosts
+
+  console.log(list,'list articles')
 
   return(
     <Styled.BlogSection>
-    <Styled.BlogCard>
+     {React.Children.toArray(
+    list.map(function(item:any){
+    return(
+      <Styled.BlogCard>
+      <Image
+      src={item.imagem.url}
+      alt=''
+      width={0}
+      height={300}
+      style={{width: 'auto'}}
+      />
+      <div>
+        <h1>{item.titulo}</h1>        
+        <p> {item.texto}</p>
+        <div className='wrapperAuthor'>
+          <span className='author'>{item.autor}</span>
+          <span>{item.data}</span>
+        </div>
+      </div>
+    </Styled.BlogCard>
+    )
+  }))} 
+    {/* <Styled.BlogCard>
       <Image
       src={Tela}
       alt=''
@@ -25,7 +50,7 @@ export default function Articles(data:any){
           <span>31 de janeiro de 2023</span>
         </div>
       </div>
-    </Styled.BlogCard>
+    </Styled.BlogCard> */}
     <Styled.PostCards>
       {/* <CardPost allPosts={data.props.allPosts}/> */}
       {/* <CardPost allPosts={props.allPosts}/> */}
