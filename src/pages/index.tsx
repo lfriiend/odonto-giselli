@@ -1,4 +1,5 @@
 import About from '@/components/About';
+import Articles from '@/components/Artigo/Articles';
 import DiscountPopup from '@/components/DiscountPopup';
 import Footer from '@/components/Footer';
 import MainContainer from '@/components/MainContainer';
@@ -8,6 +9,7 @@ import OurTeam from '@/components/OurTeam';
 import Testimonials from '@/components/Testimonials';
 import Head from 'next/head'
 import { request } from "../lib/datocms";
+import Artigos from './artigos';
 
 const HOMEPAGE_QUERY = `{
 
@@ -52,7 +54,17 @@ const HOMEPAGE_QUERY = `{
     texto
     link
   }
+  allPosts {
+    titulo
+    texto
+    slug
+    imagem {
+      url
+    }
+    autor
+  }
 }`;
+
 export async function getStaticProps() {
   const data = await request({
     query: HOMEPAGE_QUERY
@@ -65,6 +77,12 @@ export async function getStaticProps() {
 
 export default function Home(props:any) {
   const {data} = props;
+
+
+  const teste = data.allPosts
+
+  
+  console.log(teste,'homeee')
 
   return (
     <>
@@ -83,6 +101,9 @@ export default function Home(props:any) {
       <OurServices props={data}/>
       <OurTeam props={data}/>
       <Footer/>
+      <div style={{display: 'none'}}>
+      <Articles props={data}/>
+      </div>
     </>
   )
 }

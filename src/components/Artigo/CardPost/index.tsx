@@ -1,36 +1,31 @@
 import * as Styled from './style'
 import Image from 'next/image'
-import Tela from '../../../assets/images/tela.png'
-import CardPost from '../CardPost'
+import Tela from '../../../assets/images/Tela.png'
+import Link from 'next/link'
 
-export default function Articles(data:any){
-  
-  console.log(data.props.allPosts,'teste articles')
+export default function CardPost(props:any){
 
+  let list = props.allPosts;
   return(
-    <Styled.BlogSection>
     <Styled.BlogCard>
+    <Link href={"/post"}>
       <Image
       src={Tela}
       alt=''
       width={0}
-      height={300}
+      height={250}
       style={{width: 'auto'}}
       />
-      <div>
+      <Styled.BlogText>
         <h1>Por que fazer harmonização facial?</h1>        
         <p> In eu pulvinar lorem. Fusce sagittis, metus vestibulum molestie pretium, justo ex lobortis ex, imperdiet malesuada metus diam id augue. Cras sed ipsum ac odio eleifend euismod vitae a mi. Ut in porta libero, vel tempus massa. Praesent tempor erat in pulvinar imperdiet.</p>
         <div className='wrapperAuthor'>
           <span className='author'>Dra. Giselli</span>
           <span>31 de janeiro de 2023</span>
         </div>
-      </div>
+      </Styled.BlogText>
+      </Link>
     </Styled.BlogCard>
-    <Styled.PostCards>
-      {/* <CardPost allPosts={data.props.allPosts}/> */}
-      {/* <CardPost allPosts={props.allPosts}/> */}
-      <CardPost/>
-    </Styled.PostCards>
-    </Styled.BlogSection>
+    
   )
 }

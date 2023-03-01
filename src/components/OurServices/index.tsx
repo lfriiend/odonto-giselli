@@ -25,7 +25,7 @@ export default function OurServices(data:any){
       <Styled.BoxText>
         <h2>{item.titulo}</h2>
         <p>{item.texto}</p>
-        <Link href="">
+        <Link href="/artigos">
           <Image
           src={whats}
           alt='icone'

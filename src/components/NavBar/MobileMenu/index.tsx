@@ -7,7 +7,6 @@ import * as Styled from './styles'
 const MobileMenu: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
 
-  console.log(showMenu)
   const handleClick = () => {
     setShowMenu(!showMenu);
   };

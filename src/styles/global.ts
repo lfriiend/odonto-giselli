@@ -32,6 +32,8 @@ ul, li{
 
 a{
   text-decoration: none;
+  
+  color: inherit; 
 }
 
 button:hover{

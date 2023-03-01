@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Catch(props:any){
 
   let list = props.allCardshomes;
-  console.log(list,'cardhome');
+  
   return(
     <Styled.CatchSection data-aos="fade-up">
     {

@@ -1,18 +1,10 @@
 import styled from "styled-components";
 
-export const BlogSection = styled.section`
-display: flex;
-flex-direction: column;
-width: 100%;
-justify-content: center;
-align-items: center;
-`
-
 export const BlogCard = styled.div`
 display: flex;
-flex-direction: row;
+flex-direction: column;
 line-height: 2;
-padding-bottom: 40px;
+align-items: center;
 
 img{
   border-radius: 20px;
@@ -24,8 +16,9 @@ p{
 }
 
 h1{
-  font-size: 32px;
+  font-size: 20px;
   max-width: 700px;
+  padding-bottom: 20px;
 }
 
 .author{
@@ -39,8 +32,6 @@ h1{
 }
 `
 
-export const PostCards = styled.div`
-flex-direction: row;
-display: flex;
-flex-wrap: wrap;
+export const BlogText = styled.div`
+max-width: 430px;
 `

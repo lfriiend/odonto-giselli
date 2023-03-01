@@ -25,8 +25,6 @@ export default function Testimonials(data:any){
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
-  console.log(cols)
 
   let list = data.props.allDepoimentos
 
