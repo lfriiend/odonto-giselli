@@ -12,7 +12,7 @@ export default function CardPost(props:any){
     <Styled.BlogCard>
     <Link href={"/post"}>
       <Image
-      src={Tela}
+      src={''}
       alt=''
       width={0}
       height={250}
