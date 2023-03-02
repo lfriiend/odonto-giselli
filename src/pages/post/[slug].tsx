@@ -1,6 +1,5 @@
 import HeaderBlog from "@/components/Artigo/HeaderBlog"
 import Image from "next/image"
-import Tela from '../assets/images/Tela.png'
 import * as Styled from '../../styles/post'
 import Link from "next/link"
 import { request } from "../../lib/datocms";

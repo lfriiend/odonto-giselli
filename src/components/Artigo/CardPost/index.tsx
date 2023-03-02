@@ -1,6 +1,5 @@
 import * as Styled from './style'
 import Image from 'next/image'
-import Tela from '../../../assets/images/Tela.png'
 import Link from 'next/link'
 
 export default function CardPost(props:any){
