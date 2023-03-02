@@ -6,6 +6,8 @@ import Link from 'next/link'
 export default function CardPost(props:any){
 
   let list = props.allPosts;
+
+  console.log(list,'cardpost')
   return(
     <Styled.BlogCard>
     <Link href={"/post"}>

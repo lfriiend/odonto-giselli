@@ -4,7 +4,7 @@ import { request } from "../lib/datocms";
 
 const ARTICLE_QUERY = `{
 
-  allPosts {
+  allPosts(orderBy: data_DESC) {
     titulo
     texto
     slug
