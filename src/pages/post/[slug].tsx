@@ -38,7 +38,7 @@ export default function Post(props:any){
 
 <Link href={'/artigos'}>Voltar</Link>
      <Image
-      src={Tela}
+      src={''}
       alt=''
       width={0}
       height={0}
