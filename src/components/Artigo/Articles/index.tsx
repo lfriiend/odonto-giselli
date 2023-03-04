@@ -15,7 +15,7 @@ export default function Articles(data:any){
   return(
     <Styled.BlogSection>
       <Styled.MainBlogCard>
-      <Link href={`/artigos/post/${list[0].slug}`}>
+      <Link href={`/post/${list[0].slug}`}>
       <Image
       src={list[0].imagem.url}
       alt=''
@@ -41,7 +41,7 @@ export default function Articles(data:any){
       return(
       
         <Styled.BlogCard>
-          <Link href={`/artigos/post/${item.slug}`}>
+          <Link href={`/post/${item.slug}`}>
         <Image
         src={item.imagem.url}
         alt=''
