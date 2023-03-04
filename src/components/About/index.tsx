@@ -7,7 +7,7 @@ export default function About(){
     <Styled.AboutSection id="sobre" data-aos="fade-up">
     <Styled.AboutText>
     <h2>Sobre nós</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in rhoncus lectus. Phasellus orci sem, commodo semper lacus sagittis, varius vestibulum lectus. Nulla ultrices quam ac pulvinar tempor. Vestibulum congue facilisis nibh at fermentum. Quisque accumsan accumsan sem, vel feugiat tellus pellentesque et. Mauris efficitur ex ut nisl dapibus, ac finibus metus lacinia. Vivamus condimentum a odio id tempor. Nullam quis metus nunc. Mauris vel nulla arcu. </p>
+    <p>Atuando na Odontologia desde 2008, temos como objetivo cuidar da saúde bucal e autoestima, de forma individualizada, com transparência, ética, profissionalismo e qualidade.   Dra. Giselli Alves, CROSP 96.921, é graduada pela Universidade Federal de Alfenas - Unifal-MG, desde 2008, é especialista em Ortodontia pela Associação Nacional de Estudos Odontológicos, desde 2012, e especialista em Harmonização Orofacial pela Instituto Lucila Largura, desde 2021. </p>
     </Styled.AboutText>
     <Styled.ImageContainer>
     <Image

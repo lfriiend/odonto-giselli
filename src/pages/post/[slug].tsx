@@ -2,33 +2,51 @@ import HeaderBlog from "@/components/Artigo/HeaderBlog"
 import Image from "next/image"
 import * as Styled from '../../styles/post'
 import Link from "next/link"
+
 import { request } from "../../lib/datocms";
 
-// const ARTIGOS_QUERY = `{
-
-//   allPosts {
+// const GET_POST = `{
+//   query GetPost($slugPost: String){
+//     post(where: { slug: $slugPost}){
+//     titulo
 //     texto
 //     slug
-//     autor
-//     titulo
 //     imagem {
 //       url
 //     }
+//     autor
+//     data
+//     }
+//   }
 // }`;
 
-// export async function getStaticProps() {
-//   const data = await request({
-//     query: ARTIGOS_QUERY
-//   });
-//   return {
-//     props: { data },
-//     revalidate: 10
-//   };
-// }
+const GET_POST = `query GetPost($slugPost: String) {
+  post(filter: { slug: { eq: $slugPost } }) {
+    titulo
+    texto
+    slug
+    imagem {
+      url
+    }
+    autor
+    data
+  }
+}`;
 
 
-export default function Post(props:any){
-  const {data} = props
+interface PostProps{
+  post: {
+    titulo: string;
+    texto: string;
+    imagem: {
+      url: string;
+    };
+    autor: string;
+    data: string;
+  }
+}
+
+export default function Post({post}: PostProps){
 
   return(
     <>
@@ -37,21 +55,66 @@ export default function Post(props:any){
 
 <Link href={'/artigos'}>Voltar</Link>
      <Image
-      src={''}
+      src={post.imagem.url}
       alt=''
-      width={0}
-      height={0}
-      style={{width: '50%',height: 'auto', borderRadius: '20px'}}
+      width={200}
+      height={200}
+      style={{ borderRadius: '20px'}}
       />
       <Styled.PostText>
-        <h1>Por que fazer harmonização facial?</h1> 
+        <h1>{post.titulo}</h1> 
         <div className='wrapperAuthor'>
-          <span className='author'>Dra. Giselli</span>
-          <span>31 de janeiro de 2023</span>
+          <span className='author'>{post.autor}</span>
+          <span>{post.data}</span>
         </div>       
-        <p> In eu pulvinar lorem. Fusce sagittis, metus vestibulum molestie pretium, justo ex lobortis ex, imperdiet malesuada metus diam id augue. Cras sed ipsum ac odio eleifend euismod vitae a mi. Ut in porta libero, vel tempus massa. Praesent tempor erat in pulvinar imperdiet.</p>  
+        <p> {post.texto}</p>  
       </Styled.PostText>
       </Styled.PostSection>
     </>
   )
 }
+
+export async function getStaticProps({ params }:any) {
+  const { slug } = params;
+
+  const post = await request({
+    query: GET_POST,
+    variables: { slugPost: slug },
+  });
+
+  return {
+    props: { post },
+  };
+}
+
+// export async function getStaticPaths() {
+//   const data = await request({
+//     query: `{ allPosts { slug } }`,
+//   });
+
+//   const paths = data.allPosts.map((post:any) => ({
+//     params: { slug: post.slug },
+//   }));
+
+//   return { paths, fallback: 'blocking' };
+// }
+
+export async function getStaticPaths() {
+  const data = await request({
+    query: `{
+      allPosts(filter: { isPublished: { eq: true } }) {
+        slug
+      }
+    }`,
+  });
+
+  const paths = data.allPosts.map((post: any) => ({
+    params: { slug: post.slug },
+  }));
+
+  return { paths, fallback: "blocking" };
+}
+
+
+
+

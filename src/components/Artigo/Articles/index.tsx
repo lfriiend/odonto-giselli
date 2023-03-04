@@ -3,6 +3,9 @@ import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
 
+import { format } from "date-fns";
+import ptBR from "date-fns/locale/pt-BR"
+
 export default function Articles(data:any){
   
   let list = data.props.allPosts
@@ -12,7 +15,7 @@ export default function Articles(data:any){
   return(
     <Styled.BlogSection>
       <Styled.MainBlogCard>
-      <Link href={list[0].slug}>
+      <Link href={`/artigos/post/${list[0].slug}`}>
       <Image
       src={list[0].imagem.url}
       alt=''
@@ -25,7 +28,7 @@ export default function Articles(data:any){
         <p> {list[0].texto}</p>
         <div className='wrapperAuthor'>
           <span className='author'>{list[0].autor}</span>
-          <span>{list[0].data}</span>
+          <span>{format(new Date(list[0].data), "dd 'de' MMM 'de' yyyy", {locale: ptBR})}</span>
         </div>
       </div>
       </Link>
@@ -38,7 +41,7 @@ export default function Articles(data:any){
       return(
       
         <Styled.BlogCard>
-          <Link href={item.slug}>
+          <Link href={`/artigos/post/${item.slug}`}>
         <Image
         src={item.imagem.url}
         alt=''
@@ -51,7 +54,7 @@ export default function Articles(data:any){
           <p> {item.texto}</p>
           <div className='wrapperAuthor'>
             <span className='author'>{item.autor}</span>
-            <span>{item.data}</span>
+            <span>{format(new Date(item.data), "dd 'de' MMM 'de' yyyy", {locale: ptBR})}</span>
           </div>
         </div>
         </Link>

@@ -13,7 +13,7 @@ export default function MainContainer(data:any){
         <Styled.Welcome  data-aos="fade-right">
           <h4>DRA. GISELLI ALVES 🦷</h4>
           <h1>ODONTOLOGIA & HARMONIZAÇÃO FACIAL</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed est at nisl rutrum vestibulum quis non lacus.</p>
+          <p>Especialista em cuidar do seu sorriso e da sua autoestima.</p>
           <button>
             <Image
             loading='lazy'
