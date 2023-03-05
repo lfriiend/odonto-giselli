@@ -2,28 +2,19 @@ import HeaderBlog from "@/components/Artigo/HeaderBlog"
 import Image from "next/image"
 import * as Styled from '../../styles/post'
 import Link from "next/link"
-
+import { format } from "date-fns";
+import ptBR from "date-fns/locale/pt-BR"
 import { request } from "../../lib/datocms";
+import { StructuredText } from "react-datocms";
 
-// const GET_POST = `{
-//   query GetPost($slugPost: String){
-//     post(where: { slug: $slugPost}){
-//     titulo
-//     texto
-//     slug
-//     imagem {
-//       url
-//     }
-//     autor
-//     data
-//     }
-//   }
-// }`;
 
 const GET_POST = `query GetPost($slugPost: String) {
   post(filter: { slug: { eq: $slugPost } }) {
     titulo
-    texto
+    textoprevio
+    textoprincipal{
+      value
+    }
     slug
     imagem {
       url
@@ -33,20 +24,7 @@ const GET_POST = `query GetPost($slugPost: String) {
   }
 }`;
 
-
-interface PostProps{
-  post: {
-    titulo: string;
-    texto: string;
-    imagem: {
-      url: string;
-    };
-    autor: string;
-    data: string;
-  }
-}
-
-export default function Post({post}: PostProps){
+export default function Post({post}: any){
 
   return(
     <>
@@ -55,19 +33,19 @@ export default function Post({post}: PostProps){
 
 <Link href={'/artigos'}>Voltar</Link>
      <Image
-      src={post.imagem.url}
-      alt=''
-      width={200}
-      height={200}
-      style={{ borderRadius: '20px'}}
+      src={post.post.imagem.url}
+      alt='imagem do post'
+      width={500}
+      height={400}
+      style={{ objectFit: "cover"}}
       />
       <Styled.PostText>
-        <h1>{post.titulo}</h1> 
+        <h1>{post.post.titulo}</h1> 
         <div className='wrapperAuthor'>
-          <span className='author'>{post.autor}</span>
-          <span>{post.data}</span>
+          <span className='author'>{post.post.autor}</span>
+          <span>{format(new Date(post.post.data), "dd 'de' MMM 'de' yyyy", {locale: ptBR})}</span>
         </div>       
-        <p> {post.texto}</p>  
+        <StructuredText data={post.post.textoprincipal}/>
       </Styled.PostText>
       </Styled.PostSection>
     </>
@@ -87,32 +65,18 @@ export async function getStaticProps({ params }:any) {
   };
 }
 
-// export async function getStaticPaths() {
-//   const data = await request({
-//     query: `{ allPosts { slug } }`,
-//   });
-
-//   const paths = data.allPosts.map((post:any) => ({
-//     params: { slug: post.slug },
-//   }));
-
-//   return { paths, fallback: 'blocking' };
-// }
-
 export async function getStaticPaths() {
   const data = await request({
-    query: `{
-      allPosts(filter: { isPublished: { eq: true } }) {
-        slug
-      }
-    }`,
+    query: `{ allPosts{ slug } }`,
   });
 
-  const paths = data.allPosts.map((post: any) => ({
+  console.log(`data`, data);
+
+  const paths = data.allPosts.map((post:any) => ({
     params: { slug: post.slug },
   }));
 
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: 'blocking' };
 }
 
 

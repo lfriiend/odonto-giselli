@@ -18,7 +18,7 @@ export default function OurServices(data:any){
       className='image'
       src={item.foto.url}
       alt='banner com mulher sorridente'
-      width={800}
+      width={600}
       height={0}
       style={{  height: 'auto' }}
       />

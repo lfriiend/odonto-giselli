@@ -18,7 +18,7 @@ export default function MainContainer(data:any){
             <Image
             loading='lazy'
             src={Whatsapp}
-            alt=''
+            alt='Whatsapp icon'
             width={20}
             />
             faça seu orçamento
@@ -28,7 +28,8 @@ export default function MainContainer(data:any){
     <Image 
     src={Face}
     alt='banner da logo com uma mulher ruiva sorrindo'
-    width={800}
+    width={600}
+    priority={true}
     />
         </Styled.ImageContainer>
     </Styled.MainSection>

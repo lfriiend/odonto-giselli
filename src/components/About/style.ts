@@ -6,6 +6,8 @@ background-color: #EBE0D6;
 display: flex;
 padding-left: 200px;
 
+
+
 @media (max-width: 1300px){
   flex-direction: column;
   justify-content: center;

@@ -7,6 +7,12 @@ align-items: center;
 width: 100%;
 justify-content: center;
 padding-inline: 100px;
+
+a{
+  color: #374267;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
 `
 
 export const PostText = styled.div`
@@ -28,4 +34,5 @@ h1{
 .author{
   font-weight: 700;
 }
+
 `

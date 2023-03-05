@@ -6,8 +6,11 @@ const ARTICLE_QUERY = `{
 
   allPosts(orderBy: data_DESC) {
     titulo
-    texto
+    textoprincipal{
+      value
+    }
     slug
+    textoprevio
     imagem {
       url
     }
@@ -21,8 +24,7 @@ export async function getStaticProps() {
     query: ARTICLE_QUERY
   });
   return {
-    props: { data },
-    revalidate: 10
+    props: { data }
   };
 }
 

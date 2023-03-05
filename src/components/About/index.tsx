@@ -13,8 +13,8 @@ export default function About(){
     <Image
     loading='lazy'
     src={Tela}
-    alt=''
-    width={800}
+    alt='Mulher sorrindo'
+    width={600}
     priority={false}
     />
     </Styled.ImageContainer>
