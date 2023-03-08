@@ -17,8 +17,7 @@ export default function Catch(props:any){
               src={item.icone.url}
               alt=''
               width={100}
-              height={0}
-              style={{height: 'auto'}}
+              height={100}
               />
               <h3>{item.titulo}</h3>
               <p>{item.descricao}</p>
