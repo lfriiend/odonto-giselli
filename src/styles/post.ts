@@ -8,6 +8,10 @@ width: 100%;
 justify-content: center;
 padding-inline: 100px;
 
+.mainText{
+  width: 100%;
+}
+
 a{
   color: #374267;
   font-weight: 600;

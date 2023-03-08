@@ -45,7 +45,7 @@ export default function Post({post}: any){
           <span className='author'>{post.post.autor}</span>
           <span>{format(new Date(post.post.data), "dd 'de' MMM 'de' yyyy", {locale: ptBR})}</span>
         </div>       
-        <StructuredText data={post.post.textoprincipal}/>
+        <div className="mainText"><StructuredText data={post.post.textoprincipal}/></div>
       </Styled.PostText>
       </Styled.PostSection>
     </>

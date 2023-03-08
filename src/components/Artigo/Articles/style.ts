@@ -6,6 +6,12 @@ flex-direction: column;
 width: 100%;
 justify-content: center;
 align-items: center;
+
+@media (max-width: 1300px) {
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: center;
+}
 `
 
 export const MainBlogCard = styled.div`
@@ -17,6 +23,13 @@ padding-bottom: 80px;
 a{
   display: flex;
   align-items: center;
+
+  @media (max-width: 1300px) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 }
 
 img{

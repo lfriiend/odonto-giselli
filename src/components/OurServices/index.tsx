@@ -26,12 +26,7 @@ export default function OurServices(data:any){
         <h2>{item.titulo}</h2>
         <p>{item.texto}</p>
         <Link href="/artigos">
-          <Image
-          src={whats}
-          alt='icone'
-          width={20}
-          />
-        saiba mais</Link>
+        ACESSE NOSSOS ARTIGOS</Link>
       </Styled.BoxText>
       </>
       )

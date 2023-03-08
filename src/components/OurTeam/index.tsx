@@ -10,7 +10,7 @@ export default function OurTeam(data:any){
     <Styled.OurTeamSection id='especialistas' data-aos="fade-up">
       <Styled.TitleBox>
         <h2>Nosso time</h2>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+        <h4>Abaixo está nossa equipe de profissionais.</h4>
       </Styled.TitleBox>
       <Styled.ContainerCards>
         

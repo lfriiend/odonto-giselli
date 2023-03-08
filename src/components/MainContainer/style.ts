@@ -23,7 +23,7 @@ align-items: center;
 export const Welcome = styled.div`
 max-width: 500px;
 line-height: 2;
-button {
+a {
   background: #374267;
   border: none;
   border-radius: 40px;
@@ -47,7 +47,7 @@ button {
   }
 }
 
-button:hover {
+a:hover {
   cursor: pointer;
   filter: brightness(0.9);
 }

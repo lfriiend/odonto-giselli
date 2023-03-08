@@ -22,6 +22,7 @@ export default function Articles(data:any){
       width={500}
       height={400}
       style={{ objectFit: "cover"}}
+      priority={false}
       />
       <div>
         <h1>{list[0].titulo}</h1>        

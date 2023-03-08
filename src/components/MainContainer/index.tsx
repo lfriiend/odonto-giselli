@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Catch from './Catch'
 import Whatsapp from '../../assets/svg/whatsapp.svg'
 import 'aos/dist/aos.css'
+import Link from 'next/link'
 
 export default function MainContainer(data:any){
 
@@ -14,7 +15,7 @@ export default function MainContainer(data:any){
           <h4>DRA. GISELLI ALVES 🦷</h4>
           <h1>ODONTOLOGIA & HARMONIZAÇÃO FACIAL</h1>
           <p>Especialista em cuidar do seu sorriso e da sua autoestima.</p>
-          <button>
+          <Link href="https://bit.ly/dragiselli_whatsapp" target='_blank'>
             <Image
             loading='lazy'
             src={Whatsapp}
@@ -22,7 +23,7 @@ export default function MainContainer(data:any){
             width={20}
             />
             faça seu orçamento
-            </button>
+            </Link>
         </Styled.Welcome>
         <Styled.ImageContainer data-aos="fade-left">
     <Image 
